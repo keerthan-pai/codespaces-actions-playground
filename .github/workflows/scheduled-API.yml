@@ -9,8 +9,6 @@ jobs:
     name: Trigger Site Rebuild
     runs-on: ubuntu-latest
     steps:
-      - name: cURL request        
-        run: script.sh
       - name: Run script file
         # Hit the webhook endpoint to rebuild  from the "main" branch
         run: |
