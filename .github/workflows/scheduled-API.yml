@@ -10,10 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print pwd path
-        run: echo pwd
+        run: pwd
 
       - name: Print LS path
-        run: echo ls -ltR        
+        run: ls -ltR        
 
       - name: Print GITHUB_WORKSPACE
         run: echo ${GITHUB_WORKSPACE}  
