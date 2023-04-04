@@ -9,6 +9,8 @@ jobs:
     name: Trigger Site Rebuild
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
+      
       - name: Print pwd path
         run: pwd
 
