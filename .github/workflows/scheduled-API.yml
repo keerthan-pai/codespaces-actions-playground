@@ -12,12 +12,16 @@ jobs:
       - name: Print pwd path
         run: echo pwd
 
+      - name: Print LS path
+        run: echo ls -ltR        
+
       - name: Print GITHUB_WORKSPACE
         run: echo ${GITHUB_WORKSPACE}  
 
       - name: Run script file
         # Hit the webhook endpoint to rebuild  from the "main" branch
         run: |
-         chmod +x ${GITHUB_WORKSPACE}/public/scripts/test.sh
-         sh ${GITHUB_WORKSPACE}/public/scripts/test.sh
+         cd ${GITHUB_WORKSPACE}
+         chmod +x ./public/scripts/test.sh
+         sh ./public/scripts/test.sh
         shell: bash
