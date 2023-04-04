@@ -3,7 +3,7 @@ name: Trigger Site Rebuild on a CRON Schedule
 on:
   schedule:
     # Runs "at minute 55 past every hour" (see https://crontab.guru)
-    - cron: '*/1 * * * *'
+    - cron: '* */1 * * *'
 jobs:
   build:
     name: Trigger Site Rebuild
@@ -18,9 +18,6 @@ jobs:
       - name: Run script file
         # Hit the webhook endpoint to rebuild  from the "main" branch
         run: |
-         chmod +x ./public/scripts/test.sh
-         ./public/scripts/test.sh
+         chmod +x ${GITHUB_WORKSPACE}/public/scripts/test.sh
+         sh ${GITHUB_WORKSPACE}/public/scripts/test.sh
         shell: bash
-
-
-
