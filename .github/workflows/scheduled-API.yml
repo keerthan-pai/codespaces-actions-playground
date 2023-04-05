@@ -1,4 +1,4 @@
-name: Trigger Site Rebuild on a CRON Schedule
+name: Trigger Restriction API for a test account every hour
 
 on:
   schedule:
