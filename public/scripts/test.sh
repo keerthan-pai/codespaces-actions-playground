@@ -1,3 +1,5 @@
+echo "Running API"
+
 curl --verbose --location --request PATCH 'https://prestaging.freshreports.com/applications/tenants/1/restrictions' \
 --header 'Content-Type: application/json' \
 --header 'appName: freshdesk' \
@@ -13,3 +15,6 @@ curl --verbose --location --request PATCH 'https://prestaging.freshreports.com/a
         }
     }
 }'
+
+
+echo "Finished Running API"
